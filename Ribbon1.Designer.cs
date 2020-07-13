@@ -36,8 +36,8 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group2 = this.Factory.CreateRibbonGroup();
-            this.btnJobdetails = this.Factory.CreateRibbonButton();
             this.group3 = this.Factory.CreateRibbonGroup();
+            this.btnJobdetails = this.Factory.CreateRibbonButton();
             this.btnNewSheet = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group2.SuspendLayout();
@@ -57,24 +57,25 @@
             this.group2.Items.Add(this.btnJobdetails);
             this.group2.Name = "group2";
             // 
-            // btnJobdetails
-            // 
-            this.btnJobdetails.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnJobdetails.Image = global::JobApplications_Excel_Add_in.Properties.Resources.newjob;
-            this.btnJobdetails.Label = "Job details";
-            this.btnJobdetails.Name = "btnJobdetails";
-            this.btnJobdetails.ShowImage = true;
-            this.btnJobdetails.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnJobdetails_Click);
-            // 
             // group3
             // 
             this.group3.Items.Add(this.btnNewSheet);
             this.group3.Name = "group3";
             // 
+            // btnJobdetails
+            // 
+            this.btnJobdetails.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnJobdetails.Image = global::JobApplications_Excel_Add_in.Properties.Resources.newjob;
+            this.btnJobdetails.Label = "New/Edit Job";
+            this.btnJobdetails.Name = "btnJobdetails";
+            this.btnJobdetails.ShowImage = true;
+            this.btnJobdetails.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnJobdetails_Click);
+            // 
             // btnNewSheet
             // 
             this.btnNewSheet.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnNewSheet.Label = "New Sheet";
+            this.btnNewSheet.Image = global::JobApplications_Excel_Add_in.Properties.Resources.edit;
+            this.btnNewSheet.Label = "New sheet";
             this.btnNewSheet.Name = "btnNewSheet";
             this.btnNewSheet.ShowImage = true;
             this.btnNewSheet.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnNewSheet_Click);

@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbAppliedDate = new System.Windows.Forms.TextBox();
-            this.tbResponseDate = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
@@ -46,8 +45,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rdB1 = new System.Windows.Forms.RadioButton();
             this.rdB2 = new System.Windows.Forms.RadioButton();
+            this.rdB1 = new System.Windows.Forms.RadioButton();
+            this.btnDiscard = new System.Windows.Forms.Button();
+            this.tbResponseDate = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(641, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(576, 63);
+            this.label1.Size = new System.Drawing.Size(565, 61);
             this.label1.TabIndex = 0;
             this.label1.Text = "Job Application Details";
             // 
@@ -94,11 +95,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(49, 381);
+            this.label3.Location = new System.Drawing.Point(49, 372);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 46);
+            this.label3.Size = new System.Drawing.Size(269, 46);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Position:";
+            this.label3.Text = "Position/Role:";
             // 
             // label4
             // 
@@ -119,15 +120,6 @@
             this.tbAppliedDate.Size = new System.Drawing.Size(434, 113);
             this.tbAppliedDate.TabIndex = 6;
             // 
-            // tbResponseDate
-            // 
-            this.tbResponseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbResponseDate.Location = new System.Drawing.Point(1072, 442);
-            this.tbResponseDate.Multiline = true;
-            this.tbResponseDate.Name = "tbResponseDate";
-            this.tbResponseDate.Size = new System.Drawing.Size(434, 113);
-            this.tbResponseDate.TabIndex = 8;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -143,7 +135,7 @@
             this.btnSave.BackColor = System.Drawing.SystemColors.Info;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnSave.Location = new System.Drawing.Point(809, 1110);
+            this.btnSave.Location = new System.Drawing.Point(702, 1122);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(225, 110);
             this.btnSave.TabIndex = 9;
@@ -219,7 +211,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1266, 834);
+            this.label8.Location = new System.Drawing.Point(1214, 710);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 55);
             this.label8.TabIndex = 16;
@@ -229,22 +221,10 @@
             // 
             this.panel1.Controls.Add(this.rdB2);
             this.panel1.Controls.Add(this.rdB1);
-            this.panel1.Location = new System.Drawing.Point(1135, 892);
+            this.panel1.Location = new System.Drawing.Point(1059, 768);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(447, 134);
             this.panel1.TabIndex = 17;
-            // 
-            // rdB1
-            // 
-            this.rdB1.AutoSize = true;
-            this.rdB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdB1.Location = new System.Drawing.Point(31, 41);
-            this.rdB1.Name = "rdB1";
-            this.rdB1.Size = new System.Drawing.Size(125, 50);
-            this.rdB1.TabIndex = 0;
-            this.rdB1.TabStop = true;
-            this.rdB1.Text = "Yes";
-            this.rdB1.UseVisualStyleBackColor = true;
             // 
             // rdB2
             // 
@@ -258,11 +238,46 @@
             this.rdB2.Text = "No/Reject";
             this.rdB2.UseVisualStyleBackColor = true;
             // 
+            // rdB1
+            // 
+            this.rdB1.AutoSize = true;
+            this.rdB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdB1.Location = new System.Drawing.Point(31, 41);
+            this.rdB1.Name = "rdB1";
+            this.rdB1.Size = new System.Drawing.Size(125, 50);
+            this.rdB1.TabIndex = 0;
+            this.rdB1.TabStop = true;
+            this.rdB1.Text = "Yes";
+            this.rdB1.UseVisualStyleBackColor = true;
+            // 
+            // btnDiscard
+            // 
+            this.btnDiscard.BackColor = System.Drawing.SystemColors.Info;
+            this.btnDiscard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiscard.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnDiscard.Location = new System.Drawing.Point(971, 1122);
+            this.btnDiscard.Name = "btnDiscard";
+            this.btnDiscard.Size = new System.Drawing.Size(225, 110);
+            this.btnDiscard.TabIndex = 18;
+            this.btnDiscard.Text = "Discard";
+            this.btnDiscard.UseVisualStyleBackColor = false;
+            this.btnDiscard.Click += new System.EventHandler(this.btnDiscard_Click);
+            // 
+            // tbResponseDate
+            // 
+            this.tbResponseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbResponseDate.Location = new System.Drawing.Point(1072, 442);
+            this.tbResponseDate.Multiline = true;
+            this.tbResponseDate.Name = "tbResponseDate";
+            this.tbResponseDate.Size = new System.Drawing.Size(434, 113);
+            this.tbResponseDate.TabIndex = 8;
+            // 
             // NewJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1874, 1232);
+            this.Controls.Add(this.btnDiscard);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tbPrimaryContact);
@@ -299,7 +314,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbAppliedDate;
-        private System.Windows.Forms.TextBox tbResponseDate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPrevious;
@@ -312,5 +326,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton rdB2;
         private System.Windows.Forms.RadioButton rdB1;
+        private System.Windows.Forms.Button btnDiscard;
+        private System.Windows.Forms.TextBox tbResponseDate;
     }
 }
